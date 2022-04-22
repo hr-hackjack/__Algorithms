@@ -1,0 +1,89 @@
+Bitwise NOT for unsigned input
+-------------------------------- 
+
+If we have a compiler where unsigned int is represented by 3 bits then,
+least value will be  000
+highest value will be 111 => 2^3-1
+
+So, we get a formula as 2^n -1 where n is no. of bits
+
+So, in the 32 bit unsigned int, highest value will be
+1111.....1111 = 2^32 - 1    = 4294967295
+
+
+ex. x = 1           000000.......0001
+   ~x =             111111.......1110
+
+   => (2^32-1)-1
+  ~x = 4294967294
+
+    if, x = 5       000000........0101
+       ~x =         111111........1010
+
+       = 2^32 - 1 -5
+     ~x = 4294967290
+
+---------------------------------------------------------------------------------------------
+
+Bitwise NOT for signed input
+-------------------------------
+If you do negation on signed no. and it is positive, then the output will be 
+a negative no. because the leading bit which was 0 earlier becomes 1 now
+
+Since, we are using leading bit to store sign, the range for signed no. is reduced
+It is -2^31 to -2^31-1  in a 32 bits representation.
+
+2s complement of x in n bit represenation = 2^n - x
+
+Lets say we have to find binary represenation of -2 in 3 bit representation
+2^3-2 = 6
+binary representation of 6 is 110
+so, binary representation of -2 in 3 bit representation is 110
+You can simply find this as below
+
+2 =     010
+1s =    101
++1 =    110 which is the ans
+
+Consider below examples for 32 bits
+
+x = 1
+-x = ?
+
+1  =     0000000000........00001
+-1 =     1111111111........11110
+
+= 2*32-1 - 1 
+=> -x = -2      using formula 2^n-x
+
+or you could find it as belows
+
+000000000......000001 was your binary no.
+111111111......111110 this was the negation.complement it, we get
+000000000.......00001 and add 1 in it
+000000000.......00010 which is 2
+
+so we get sign negative from negating the original no. and get value by taking 2s complement of the binary form of negated value
+
+--> to unset the rightmost bit, do bitwise & with n-1
+ie n & (n-1). See brian kerningam algo
+
+----------------------------------------------------------------------
+Properties of XOR
+
+x^0 = x
+x^y = y^x
+x^(y^z) = (x^y)^z
+x^x = 0
+
+-----------------------------------------------------------------------
+
+TwoOddOccuring tough ques to understand
+
+
+
+
+
+
+
+
