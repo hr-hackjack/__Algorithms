@@ -1,0 +1,30 @@
+1. Degree of nodes - no. of children a node has
+2. Nodes which have degree zero is called leaf node
+3. Nodes which have degree > 0 are called internal nodes
+
+Application of tree data structure-
+---------------------------------
+1. used to represent hierarchical data
+ex - organisation structure, folder structure, html/xml content, in inheritance(OOPS)
+
+2. Binary search tree (imp)
+3. Binary heap
+4. B and B+ trees in dbms for indexing
+5. spanning and shortest path trees in computer network
+6. parse tree, expression tree in compilers used to parse src code
+
+Variations of tree-
+--------------------
+1. Trie - used to represent dictionary. also support prefix search
+2. Suffix tree - used to do fast searching in string
+3. Binary index tree - used for range query searches
+4. Segment tree - used for range query searches
+
+Tree traversal -
+--------------
+1. Breadth First traversal - (Level order traversal) - traverse each level line by line from left to right
+2. Depth First traversal - there are 3! permutation but most common are below three
+    a. inorder - LNR
+    b. preorder - NLR
+    c. postorder - LRN
+
