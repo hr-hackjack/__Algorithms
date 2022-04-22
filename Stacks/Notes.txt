@@ -1,0 +1,9 @@
+Application of stack
+--------------------
+1. Function calls 
+2. Checking for balanced parantheses
+3. Reversing items
+4. Infix to prefix/postfix
+5. Evaluation of postfix/prefix
+6. Stock span problem  - V.Imp
+7. Undo/redo or forward/backward operation
