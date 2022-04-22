@@ -1,0 +1,22 @@
+Application of queue data structure
+-------------------------------------
+
+1. Single resource and multiple consumers - example ticket system, we book ticket in queue basis ie. first come first served or FIFO. 
+Same happnes in Process scheduling in OS
+
+2. Synchronization between slow and fast device. ex. between keyboard and cpu. all instructions go in the form of queue.
+Same happens in networking when a high bandwidth network transmits information to a low bandwidth network, low bandwidth network 
+cant consume all that data very fast. So there is router between the two, which takes data from high bandwidth network and keep it in the
+form of queue and when low bandwidth network becomes available it takes accordingly.
+
+3. Use of queue in OS -
+    a) Semaphores - When a resource is not available the process goes into sleeping state, it resumes again when the resource 
+    becomes available. This happens in the form of queue.
+    b) Spooling
+    c) FCFS scheduling
+    d) Buffers for devices like keyboard
+
+
+--------------------------------------------------------------------------------------------------------
+List and deque are the container which provide implementation for queue. By default it has deque implementation
+Vector was there for stack but not in queue because vectore does not provide pop_front functionality
